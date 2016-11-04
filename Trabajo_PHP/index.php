@@ -1,6 +1,7 @@
 <?php
 session_start();
 $_SESSION['index'] = true;
+//-----------Compruebo si han iniciado session -------------------//
 if ($_SESSION['accesopermitido'] == true) {
   ?>
   <!DOCTYPE html>
@@ -45,6 +46,9 @@ if ($_SESSION['accesopermitido'] == true) {
               <td><?= $alum->curso_actual ?></td>
               <td><?= $alum->telefono ?></td>
               <td><?= $alum->direccion ?></td>
+              
+<!--*********************** Elimino jr estudiantes ********************************-->  
+       
               <td><form action="baja_Alumno.php" method="GET">
                   <input type="hidden"  name="clave" value="<?= $alum->clave_alumno ?>" >
                   <input type="submit" value="Eliminar">
@@ -55,15 +59,15 @@ if ($_SESSION['accesopermitido'] == true) {
   }
   ?>
           
-          
-            <tr><td><form action="altaClienteAccion.php" method="post">
-              Clave <input type="text" name="clave" size="1px" required ></td>
-             
-              <td>Nombre <input type="text" name="nombre"></td>
-              <td>Edad <input type="text" name="edad" size="1px"></td>
-              <td>Curso_Altual <input type="text" name="curso"></td>
-              <td> Teléfono <input type="tel" name="telefono"></td>
-              <td> Dirección <input type="text" name="direccion"></td>
+<!-- *********************** Añado estudiantes nuevos jr************************* -->  
+        
+            <tr><form action="alta_Alumno.php" method="post">
+             <td>Clave <input type="number" name="clave" size="1"  min="1" max="300" required ></td>
+              <td>Nombre <input type="text" name="nombre" required></td>
+              <td>Edad <input type="number" name="edad" size="1"  min="5" max="100" required ></td>
+              <td>Curso_Altual <input type="text" name="curso" required ></td>
+              <td> Teléfono <input type="tel" name="telefono" required></td>
+              <td> Dirección <input type="text" name="direccion" required></td>
              
               <td><input type="submit" value="Añadir">
              </form></td></tr>
@@ -77,7 +81,7 @@ if ($_SESSION['accesopermitido'] == true) {
   </html>
   <?php
 } else {
-
+//--------------Si no ha iniciado session se envia a la pagina para que inicie session ------------------------- //
   echo '<script type="text/javascript">
            alert("iniciar sesion");
            window.location="control_Usuario.php";
