@@ -12,49 +12,33 @@ registro. Luego esos datos se enviarán a una página que ejecutará INSERT.
     Author     : Junior Castillo
 */
 
-body {
-  background-image: url(http://www.jonaga.com/imagenes/fondo%20pagina%20fijo.jpg);
-  /*background-color: #125598;*/
-  font-family: Arial, Helvetica, sans-serif;
-  padding: 0px;
-  margin: 0px;
-}
-h1{
-  color: aliceblue;
-}
-div#contenedor{
-
-  text-align: center;
-
+body {font-family: Arial, Helvetica, sans-serif;
 
 }
-table {
-    font-size: 12px;
-    margin-left: 7%;
-    width: 480px;
-    text-align: left;
-    border-collapse: collapse;
+
+table { font-size: 12px;    
+        margin: 45px;     
+        width: 480px; 
+        text-align: left;    
+        border-collapse: collapse;
 }
 
-th {
-    font-size: 13px;
-    font-weight: normal;
-    padding: 5px 20px 5px 20px;
-    height: 50px;
-    background: #cacaca;
-    border-top: 4px solid #cacaca;
-    border-bottom: 1px solid #fff;
-    color: rgb(0, 0, 0);
+th {     font-size: 13px;     
+         font-weight: normal;     
+         padding: 8px;     
+         background: #b9c9fe;
+         border-top: 4px solid #aabcfe;    
+         border-bottom: 1px solid #fff; 
+         color: #039; 
 }
 
-td {
-    padding: 5px 20px 5px 20px;
-    height: 50px;
-    background: #807373;
-    border-bottom: 1px solid #fff;
-    color: #000000;
-    border-top: 1px solid transparent;
+td {    padding: 8px;     
+        background: #e8edff;    
+        border-bottom: 1px solid #fff;
+        color: #669;   
+        border-top: 1px solid transparent; 
 }
+
 tr:hover td { background: #d0dafd; 
               color: #339; 
 }
