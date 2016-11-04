@@ -54,6 +54,20 @@ if ($_SESSION['accesopermitido'] == true) {
     <?php
   }
   ?>
+          
+          
+            <tr><td><form action="altaClienteAccion.php" method="post">
+              Clave <input type="text" name="clave" size="1px" required ></td>
+             
+              <td>Nombre <input type="text" name="nombre"></td>
+              <td>Edad <input type="text" name="edad" size="1px"></td>
+              <td>Curso_Altual <input type="text" name="curso"></td>
+              <td> Teléfono <input type="tel" name="telefono"></td>
+              <td> Dirección <input type="text" name="direccion"></td>
+             
+              <td><input type="submit" value="Añadir">
+             </form></td></tr>
+             
         </table>
         <br>
         Número de clientes: <?= $consulta->rowCount() ?>
